@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "ignorePatterns": ["webpack.config.js", "node_modules/"]
+}

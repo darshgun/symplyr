@@ -1,0 +1,10 @@
+@import "./theme/default";
+
+@import "./base/config-extractor";
+@import "./base/config";
+@import "./base/color";
+
+@import "./components/player";
+@import "./components/progress";
+@import "./components/controls";
+@import "./components/control";

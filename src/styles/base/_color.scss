@@ -1,0 +1,48 @@
+/// Returns the color value for a given color name and group.
+///
+/// @param {String} $hue - The colors hue.
+/// @param {String} $value - The darkness/lightness of the color. Defaults to base.
+/// @return {Color} The color value.
+@function color($hue, $value: default) {
+  $return-color: map-get(map-get($color-palette-data, $hue), $value);
+
+  @if map-has-key($color-palette-data, $return-color) {
+    $return-color: map-get(map-get($color-palette-data, $return-color), $value);
+  }
+
+  @if type-of($return-color) == color {
+    @return $return-color;
+  } @else {
+    $error: "Color not found. Make sure arguments are strings.";
+    @error $error;
+  }
+}
+
+/// Returns text color based on the given background color (needs to be rewritten)
+///
+/// @param {String} $value - Background color.
+/// @return {Color} The color value.
+/// Credits: https://codepen.io/davidhalford/pen/wlDxL
+@function text-contrast($value) {
+  $return-color: color("white") !default;
+
+  $color-brightness: round(
+    (red($value) * 299) + (green($value) * 587) + (blue($value) * 114) / 1000
+  );
+  $light-color: round(
+    (red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000
+  );
+
+  @if abs($color-brightness) < ($light-color/2) {
+    $return-color: color("white");
+  } @else {
+    $return-color: color("black");
+  }
+
+  @if type-of($return-color) == color {
+    @return $return-color;
+  } @else {
+    $error: "Color not found. Make sure arguments are strings.";
+    @error $error;
+  }
+}

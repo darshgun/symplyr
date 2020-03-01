@@ -1,0 +1,7 @@
+node_modules
+.sass-cache
+.temp-media
+.DS_Store
+npm-debug.log
+*.mp4
+*.webm

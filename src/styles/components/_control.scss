@@ -1,0 +1,17 @@
+.symplyr__control {
+  border: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+
+  svg {
+    fill: currentColor;
+    display: block;
+    pointer-events: none;
+  }
+}
+
+.symplyr__control--button {
+  background-color: color("base", "default");
+  color: text-contrast(color("base", "default"));
+}

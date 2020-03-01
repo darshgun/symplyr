@@ -1,0 +1,40 @@
+{
+  "name": "symplyr",
+  "version": "0.0.1",
+  "description": "A simple html5 media player written in vanilla js",
+  "main": "dist/symplyr.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,scss}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "build": "cross-env webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darshana4it/symplyr.git"
+  },
+  "keywords": [
+    "HTML5 Video",
+    "HTML5 Mediaplayer"
+  ],
+  "author": "Darshana Gunawardana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darshana4it/symplyr/issues"
+  },
+  "homepage": "https://github.com/darshana4it/symplyr#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

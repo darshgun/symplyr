@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Video Player Demo</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="../dist/main.css" />
+    <link rel="stylesheet" href="./css/demo.css" />
+  </head>
+  <body>
+    <div class="symplyr demo-media">
+      <video
+        id="demo-video"
+        poster="./asset/poster.jpg"
+        id="player"
+        playsinline
+        controls
+      >
+        <source src="./asset/video.mp4" type="video/mp4" />
+        <!-- <source src="/demo/asset/video.webm" type="video/webm" /> -->
+      </video>
+      <div class="symplyr__controls">
+        <button class="symplyr__control symplyr__control--button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+          </svg>
+        </button>
+        <button class="symplyr__control symplyr__control--button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+          </svg>
+        </button>
+        <div
+          class="symplyr__control symplyr__control--progress symplyr__control--seek"
+        >
+          <input type="range" class="" min="0" max="100" step=".1" />
+        </div>
+        <div
+          class="symplyr__control symplyr__control--progress symplyr__control--volume"
+        >
+          <input
+            type="range"
+            class="symplyr__control symplyr__control--progress symplyr__control--volume"
+            min="0"
+            max="100"
+            step="1"
+          />
+        </div>
+        <span class="symplyr__control symplyr__control--timestamp">00:00</span>
+      </div>
+    </div>
+    <small class="credit">
+      <a
+        href="https://www.pexels.com/video/aerial-shot-of-forest-covered-in-snow-857019/"
+        >Video credit: Pexels/invisiblepower</a
+      >
+    </small>
+    <script src="../dist/symplyr.js"></script>
+    <script>
+      var demoVideo = new Symplyr("#demo-video");
+      // demoVideo.symplyrfy();
+    </script>
+  </body>
+</html>

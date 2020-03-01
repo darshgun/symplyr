@@ -1,0 +1,14 @@
+.symplyr {
+  display: flex;
+  flex-direction: column;
+  //   height: 100%;
+  width: 100%;
+  min-width: 200px;
+  position: relative;
+
+  video {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

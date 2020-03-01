@@ -1,0 +1,40 @@
+$theme-config-data: (
+  "config": (
+    "control-size": "small",
+    // available options: small (default), large
+      "control-borders": "rounded",
+    // available options: rounded (default), square, circle
+      "control-background": "transparent",
+    // available options: transparent (default), solid
+  ),
+  "color": (
+    "base": (
+      "dark": rgb(8, 78, 138),
+      "default": rgb(0, 111, 187),
+      "light": rgb(180, 225, 250)
+    ),
+    "ink": (
+      "default": rgb(255, 255, 255)
+    ),
+    "black": (
+      "default": rgb(0, 0, 0)
+    ),
+    "white": (
+      "default": rgb(255, 255, 255)
+    )
+  ),
+  "typography": (
+    "base": #{"Nunito Sans",
+    -apple-system,
+    "BlinkMacSystemFont",
+    "San Francisco",
+    "Roboto",
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif},
+    monospace: #{Monaco,
+    Consolas,
+    "Lucida Console",
+    monospace}
+  )
+);

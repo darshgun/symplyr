@@ -1,0 +1,22 @@
+// Extracting Symplyr configuration data from theme configuration
+$symplyr-config-data: map-get($theme-config-data, "config");
+
+/// Returns the configuration value for a given option key.
+///
+/// @param {String} $key - Configuration option key.
+/// @param {String} $default - Default/ fallback value.
+/// @return {Value} Property value.
+@function config($key, $default) {
+  $return-value: map-get($symplyr-config-data, $key);
+
+  @if ($return-value) {
+    @return $return-value;
+  } @else {
+    @return $default; // Needs to be improved
+  }
+}
+
+$color-palette-data: map-get($theme-config-data, "color");
+$control-size: config("control-size", "small");
+$control-border-style: config("control-borders", "rounded");
+$control-background-style: config("control-background", "transparent");
