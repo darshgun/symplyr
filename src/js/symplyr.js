@@ -17,7 +17,6 @@ class Symplyr {
     this.controls = {
       container: null,
       playButton: null,
-      pauseBUtton: null,
       seekBar: null,
       volumeBar: null,
       timestamp: null
@@ -37,6 +36,19 @@ class Symplyr {
     symplyrWrapper.setAttribute("class", symplyrWrapperClass);
     parentElement.replaceChild(symplyrWrapper, mediaElement);
     symplyrWrapper.appendChild(mediaElement);
+
+    this.controls.container = symplyrWrapper;
+  }
+
+  createControl(element, classes, attributes) {
+    let playButton = document
+      .createElement("button")
+      .setAttribute(
+        "class",
+        `${this.symplyrClasses.controlItem} ${this.symplyrClasses.playButton}`
+      );
+
+    this.controls.container.appendChild(playButton);
   }
 }
 
